@@ -230,15 +230,16 @@
        STICKY NAVBAR
   ═══════════════════════════════════════════════ -->
   <header class="sticky top-0 z-50 sticky-cta border-b border-slate-700/50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-4 py-2 sm:py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="bg-white rounded-xl px-3 py-1 flex items-center">
-          <img src="validador_fiscal/assets/logo_validanota.png" alt="validanota" class="h-12 w-auto" />
+        <div class="bg-white rounded-xl px-2 py-0.5 sm:px-3 sm:py-1 flex items-center">
+          <img src="validador_fiscal/assets/logo_validanota.png" alt="validanota" class="h-8 sm:h-12 w-auto" />
         </div>
       </div>
       <a href="#piloto"
-         class="btn-shimmer bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
-        Quero o Piloto — {{PRICE_PILOT_FMT}}
+         class="btn-shimmer bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors whitespace-nowrap">
+        <span class="sm:hidden">Quero o Piloto</span>
+        <span class="hidden sm:inline">Quero o Piloto — {{PRICE_PILOT_FMT}}</span>
       </a>
     </div>
   </header>
@@ -277,7 +278,16 @@
            class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
           Quero participar do piloto →
         </a>
-        <a href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Prefiro%20falar%20antes%20sobre%20o%20piloto%20ValidaFiscal"
+        <a
+          href="validador_fiscal/valida_nota_apresentacao.pdf"
+          download
+          onclick="gtag('event', 'download_pdf', { file_name: 'valida_nota_apresentacao.pdf', source: 'landing_page', cta_location: 'hero' })"
+          class="btn-shimmer w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all hover:scale-105">
+          Baixar apresentação em PDF
+        </a>
+      </div>
+      <div class="mb-8">
+        <a href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Prefiro%20falar%20antes%20sobre%20o%20piloto%20Valida Nota"
            target="_blank"
            class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
           Prefere falar antes? Chame no WhatsApp
@@ -351,7 +361,7 @@
       <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 reveal">
         Reconhece algum destes cenários?
       </h2>
-      <p class="text-center text-slate-500 mb-12 reveal">Se sim, o ValidaFiscal foi feito para o seu escritório.</p>
+      <p class="text-center text-slate-500 mb-12 reveal">Se sim, o Valida Nota foi feito para o seu escritório.</p>
       <div class="space-y-4 reveal-stagger">
         <!-- Pain items -->
         <div class="card-lift flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5">
@@ -397,7 +407,7 @@
           Uma camada de auditoria que age<br class="hidden sm:block" /> <span class="text-brand-500">antes que o erro vire problema</span>
         </h2>
         <p class="text-slate-400 max-w-2xl mx-auto">
-          O ValidaFiscal analisa cada nota emitida pela sua carteira, detecta inconsistências em tempo real
+          O Valida Nota analisa cada nota emitida pela sua carteira, detecta inconsistências em tempo real
           e te alerta enquanto ainda dá para cancelar sem custo.
         </p>
       </div>
@@ -557,7 +567,7 @@
           <!-- Left: what's included -->
           <div>
             <h3 class="font-extrabold text-2xl mb-6">
-              Piloto Fundador — ValidaFiscal<br />
+              Piloto Fundador — Valida Nota<br />
               <span class="text-brand-600">— Escopo definido, limite claro</span>
             </h3>
             <ul class="space-y-3">
@@ -611,7 +621,7 @@
             </div>
 
             <!-- CTA Button -->
-            <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20ValidaFiscal"
+            <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
                target="_blank"
                class="btn-shimmer block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg text-center px-8 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/20 hover:scale-105 mb-3">
               Quero garantir minha vaga →
@@ -748,7 +758,16 @@
            class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
           Quero participar do piloto →
         </a>
-        <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20ValidaFiscal"
+        <a
+          href="/downloads/valida_nota_apresentacao.pdf"
+          download
+          onclick="gtag('event', 'download_pdf', { file_name: 'valida_nota_apresentacao.pdf', source: 'landing_page', cta_location: 'cta_final' })"
+          class="btn-shimmer w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all hover:scale-105">
+          Baixar apresentação em PDF
+        </a>
+      </div>
+      <div class="mt-4">
+        <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
            target="_blank"
            class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
           Prefiro falar no WhatsApp primeiro
@@ -776,7 +795,7 @@
         <!-- Copyright -->
         <div class="w-full border-t border-slate-700/60 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-xs text-slate-500">© 2026 validanota. Todos os direitos reservados.</p>
-          <p class="text-xs text-slate-600">ValidaFiscal é um produto validanota · Oferta atualizada em abril de 2026</p>
+          <p class="text-xs text-slate-600">Valida Nota é um produto validanota · Oferta atualizada em abril de 2026</p>
         </div>
       </div>
     </div>

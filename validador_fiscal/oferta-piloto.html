@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valida Nota — Piloto de Validação de NF-e e NFS-e</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand-500: #22c55e;
+      --brand-600: #16a34a;
+      --brand-700: #15803d;
+      --brand-50: #f0fdf4;
+      --brand-100: #dcfce7;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --danger: #ef4444;
+      --amber-50: #fffbeb;
+      --amber-200: #fde68a;
+      --amber-700: #b45309;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--slate-800);
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ═══ PAGE SETUP FOR PRINT ══════════════════════ */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media screen {
+      .page {
+        max-width: 210mm;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        margin: 20px auto;
+      }
+    }
+
+    /* ═══ HEADER ═════════════════════════════════════ */
+    .header {
+      background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a5f 60%, #0f2d1f 100%);
+      color: #fff;
+      padding: 20px 28px 16px;
+      position: relative;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .logo-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 4px 12px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo-box img {
+      height: 26px;
+      width: auto;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.35);
+      color: #86efac;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .header h1 {
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .header h1 span {
+      color: var(--brand-500);
+    }
+
+    .header p {
+      font-size: 11px;
+      color: var(--slate-300);
+      line-height: 1.45;
+      max-width: 95%;
+    }
+
+    .header p strong {
+      color: #fff;
+    }
+
+    /* ═══ MAIN CONTENT ══════════════════════════════ */
+    .content {
+      padding: 14px 28px 10px;
+    }
+
+    /* ── Pain section ──────────────────── */
+    .pain-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+
+    .pain-box p {
+      font-size: 10.5px;
+      color: var(--slate-700);
+      line-height: 1.5;
+    }
+
+    .pain-box p strong {
+      color: var(--danger);
+    }
+
+    /* ── Two columns ───────────────────── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .col-card {
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .col-card h3 {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .col-card h3 .icon {
+      width: 20px;
+      height: 20px;
+      background: var(--brand-100);
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .col-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .col-card ul li {
+      font-size: 10px;
+      color: var(--slate-600);
+      line-height: 1.4;
+      padding: 1.5px 0;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .col-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--brand-500);
+      font-weight: 700;
+      font-size: 10px;
+    }
+
+    /* ── Validation grid ───────────────── */
+    .validation-section {
+      background: var(--slate-900);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .validation-section h3 {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+
+    .validation-legend {
+      text-align: center;
+      font-size: 8px;
+      color: var(--slate-400);
+      margin-bottom: 6px;
+    }
+
+    .validation-legend span {
+      margin: 0 4px;
+    }
+
+    .validation-legend .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+
+    .validation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 10px;
+    }
+
+    .validation-item {
+      font-size: 9.5px;
+      color: var(--slate-300);
+      padding: 1.5px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .validation-item .tag {
+      font-size: 8px;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tag-bloqueio {
+      background: rgba(239,68,68,0.15);
+      color: #f87171;
+    }
+
+    .tag-preventivo {
+      background: rgba(251,146,60,0.15);
+      color: #fb923c;
+    }
+
+    .tag-alerta {
+      background: rgba(251,191,36,0.15);
+      color: #fbbf24;
+    }
+
+    .tag-operacional {
+      background: rgba(148,163,184,0.2);
+      color: var(--slate-400);
+    }
+
+    /* ── Offer section ─────────────────── */
+    .offer-section {
+      background: var(--brand-50);
+      border: 2px solid var(--brand-500);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .offer-label {
+      position: absolute;
+      top: -11px;
+      left: 24px;
+      background: var(--brand-500);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 12px;
+      border-radius: 6px;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .offer-left h3 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .offer-left ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .offer-left ul li {
+      font-size: 10px;
+      color: var(--slate-600);
+      line-height: 1.4;
+      padding: 1.5px 0;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .offer-left ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--brand-600);
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .offer-right {
+      text-align: center;
+      padding: 10px 12px;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid var(--slate-200);
+    }
+
+    .offer-right .price-old {
+      font-size: 10px;
+      color: var(--slate-400);
+      text-decoration: line-through;
+    }
+
+    .offer-right .price {
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--slate-900);
+      line-height: 1.1;
+      margin: 1px 0;
+    }
+
+    .offer-right .price-sub {
+      font-size: 9px;
+      color: var(--slate-500);
+      margin-bottom: 5px;
+    }
+
+    .offer-right .credit-badge {
+      background: var(--brand-100);
+      border: 1px solid rgba(34,197,94,0.25);
+      color: var(--brand-700);
+      font-size: 8.5px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .offer-right .scope-items {
+      font-size: 9px;
+      color: var(--slate-500);
+      line-height: 1.5;
+    }
+
+    .offer-right .scope-items strong {
+      color: var(--slate-700);
+    }
+
+    /* ── Not-replacement ───────────────── */
+    .not-replace {
+      text-align: center;
+      font-size: 9.5px;
+      color: var(--slate-500);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .not-replace strong {
+      color: var(--slate-700);
+    }
+
+    /* ── Steps ──────────────────────────── */
+    .steps-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .step-card {
+      text-align: center;
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 10px 8px;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: var(--brand-50);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--brand-600);
+      margin-bottom: 5px;
+    }
+
+    .step-card h4 {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 3px;
+    }
+
+    .step-card p {
+      font-size: 9px;
+      color: var(--slate-500);
+      line-height: 1.4;
+    }
+
+    /* ── FAQ ────────────────────────────── */
+    .faq-section {
+      margin-bottom: 12px;
+    }
+
+    .faq-section h3 {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 6px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+    }
+
+    .faq-item {
+      padding: 0;
+    }
+
+    .faq-q {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--slate-700);
+      margin-bottom: 1px;
+    }
+
+    .faq-a {
+      font-size: 9px;
+      color: var(--slate-500);
+      line-height: 1.4;
+    }
+
+    /* ── ROI box ───────────────────────── */
+    .roi-box {
+      background: var(--amber-50);
+      border: 1px solid var(--amber-200);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+    }
+
+    .roi-box p {
+      font-size: 10px;
+      color: var(--amber-700);
+      line-height: 1.45;
+    }
+
+    .roi-formula {
+      font-family: 'Courier New', monospace;
+      background: rgba(180,83,9,0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 2px;
+    }
+
+    /* ═══ FOOTER / CTA ══════════════════════════════ */
+    .footer {
+      background: var(--slate-900);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .footer-left {
+      flex: 1;
+    }
+
+    .footer-left h3 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .footer-left p {
+      font-size: 9.5px;
+      color: var(--slate-400);
+      line-height: 1.4;
+    }
+
+    .footer-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--brand-500);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      color: var(--slate-300);
+      font-size: 10px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-align: center;
+    }
+
+    .footer-meta {
+      font-size: 8.5px;
+      color: var(--slate-500);
+      text-align: center;
+      padding: 0 32px 8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* ═══ PRINT OVERRIDES ═══════════════════════════ */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+      .cta-btn { border: 2px solid var(--brand-500); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ═══ HEADER ═══════════════════════════════════ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-box">
+        <img src="assets/logo_validanota.png" alt="validanota" />
+      </div>
+      <div class="header-badge">
+        <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Piloto fundador · Abril 2026
+      </div>
+    </div>
+    <h1>
+      Evite notas erradas antes que virem<br/>
+      <span>retrabalho no fechamento.</span>
+    </h1>
+    <p>
+      Para escritórios contábeis e PMEs que querem <strong>validar NF-e e NFS-e já emitidas</strong>,
+      identificar inconsistências mais cedo e reduzir correções de última hora — sem trocar de emissor.
+    </p>
+  </div>
+
+  <!-- ═══ CONTENT ══════════════════════════════════ -->
+  <div class="content">
+
+    <!-- Pain -->
+    <div class="pain-box">
+      <p>
+        Se o erro só aparece no fechamento, <strong>sua equipe paga duas vezes:</strong>
+        na correção e no tempo perdido para descobrir o que revisar. O problema não é a emissão — é a descoberta tardia.
+      </p>
+    </div>
+
+    <!-- Two columns: Para quem / O que entregamos -->
+    <div class="two-col">
+      <div class="col-card">
+        <h3><span class="icon">👤</span> Para quem é</h3>
+        <ul>
+          <li>Escritórios contábeis com 30 a 200 clientes ativos</li>
+          <li>PMEs que emitem notas regularmente e sentem dor com revisão tardia</li>
+          <li>Operações com conferência manual e dependência do contador para identificar erros</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h3><span class="icon">📋</span> O que o piloto entrega</h3>
+        <ul>
+          <li>Recebimento por XML, planilha ou exportação equivalente</li>
+          <li>Validação de até 500 notas priorizadas por severidade</li>
+          <li>Relatório com fila priorizada (PDF + CSV)</li>
+          <li>Call de diagnóstico (15 min) + devolutiva</li>
+          <li>Acompanhamento direto com o fundador</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Validação: o que auditamos -->
+    <div class="validation-section">
+      <h3>O que validamos em cada nota</h3>
+      <div class="validation-legend">
+        <span><span class="dot" style="background:#ef4444"></span>bloqueio</span>
+        <span><span class="dot" style="background:#fb923c"></span>bloqueio preventivo</span>
+        <span><span class="dot" style="background:#fbbf24"></span>alerta forte</span>
+        <span><span class="dot" style="background:#94a3b8"></span>alerta operacional</span>
+      </div>
+      <div class="validation-grid">
+        <div class="validation-item"><span class="tag tag-bloqueio">bloqueio</span> Código de serviço municipal</div>
+        <div class="validation-item"><span class="tag tag-bloqueio">bloqueio</span> Alíquota incoerente com parâmetro municipal</div>
+        <div class="validation-item"><span class="tag tag-bloqueio">bloqueio</span> Retenção: tomador × regime × intermediário</div>
+        <div class="validation-item"><span class="tag tag-bloqueio">bloqueio</span> Tomador PJ: CNPJ, endereço, cidade/UF e IM</div>
+        <div class="validation-item"><span class="tag tag-preventivo">preventivo</span> Certificado digital: validade e cadeia ICP-Brasil</div>
+        <div class="validation-item"><span class="tag tag-alerta">alerta forte</span> CBS/IBS inconsistente (padrão 2026)</div>
+        <div class="validation-item"><span class="tag tag-bloqueio">bloqueio</span> Duplicidade de RPS por chave idempotente</div>
+        <div class="validation-item"><span class="tag tag-alerta">alerta forte</span> Histórico: alíquota ou código fora do padrão</div>
+        <div class="validation-item"><span class="tag tag-operacional">operacional</span> Drift de legislação e regras locais</div>
+        <div class="validation-item"><span class="tag tag-operacional">operacional</span> Indisponibilidade do ente e fallback RPS</div>
+      </div>
+    </div>
+
+    <!-- Oferta do piloto -->
+    <div class="offer-section">
+      <div class="offer-label">Oferta do Piloto Fundador</div>
+      <div class="offer-grid">
+        <div class="offer-left">
+          <h3>Teste sem risco.<br/>Pague só se fizer sentido.</h3>
+          <ul>
+            <li>Sem trocar ERP, emissor ou sistema atual</li>
+            <li>Sem integração pesada — comece com XML ou planilha</li>
+            <li>Escopo definido, limite claro, saída livre</li>
+            <li>Primeiro fluxo funcionando em até 14 dias</li>
+            <li>Validação rápida, limitada e orientada a resultado</li>
+          </ul>
+        </div>
+        <div class="offer-right">
+          <div class="price-old">Setup completo: R$ 1.200</div>
+          <div class="price">R$ 490</div>
+          <div class="price-sub">pagamento único</div>
+          <div class="credit-badge">
+            100% convertido em crédito no setup<br/>se continuar em até 7 dias
+          </div>
+          <div class="scope-items">
+            Até <strong>500 notas</strong> · Até <strong>3 CNPJs</strong><br/>
+            Prazo: <strong>até 14 dias</strong><br/>
+            Apenas <strong>10 vagas/mês</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Não substitui -->
+    <div class="not-replace">
+      O piloto <strong>não substitui o seu emissor</strong>. Ele opera por cima do fluxo que você já utiliza hoje — sem trocar nada no processo atual.
+    </div>
+
+    <!-- Como funciona -->
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4>Você exporta</h4>
+        <p>Exporte um lote de XMLs ou CSV do sistema que já usa. Sem integração.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4>Nós classificamos</h4>
+        <p>Processamos e identificamos divergências por severidade e tipo.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4>Você recebe a fila</h4>
+        <p>Relatório ordenado por severidade — foco no que precisa de ação.</p>
+      </div>
+    </div>
+
+    <!-- ROI -->
+    <div class="roi-box">
+      <p>
+        <strong>Quanto custa o retrabalho do seu time?</strong> Se o seu time corrige notas todo mês, o custo já existe.
+      </p>
+      <p class="roi-formula">
+        Perda mensal = nº de correções × tempo médio × custo/hora do time
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h3>Perguntas frequentes</h3>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <p class="faq-q">Isso substitui meu emissor?</p>
+          <p class="faq-a">Não. O piloto valida as notas já emitidas no fluxo que você usa hoje.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Funciona com emissor Sebrae, NFS-e Nacional ou ERP?</p>
+          <p class="faq-a">Se você exporta XML ou CSV, o piloto consegue começar sem integração.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Em quanto tempo vejo resultado?</p>
+          <p class="faq-a">O objetivo é colocar o primeiro fluxo funcionando em até 14 dias.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">E se eu não quiser seguir depois?</p>
+          <p class="faq-a">Você fica com o diagnóstico, o aprendizado e o modelo de validação.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- .content -->
+
+  <!-- ═══ FOOTER / CTA ═════════════════════════════ -->
+  <div class="footer">
+    <div class="footer-left">
+      <h3>Quer saber se encaixa no seu fluxo?</h3>
+      <p>
+        Responda esta mensagem ou chame no WhatsApp.<br/>
+        Sem compromisso — validamos aderência antes de qualquer contratação.
+      </p>
+    </div>
+    <div class="footer-ctas">
+      <a href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Recebi%20o%20PDF%20do%20piloto%20e%20quero%20saber%20mais" class="cta-btn" target="_blank">
+        Falar no WhatsApp →
+      </a>
+      <a href="https://validanota.com.br/" class="cta-secondary" target="_blank">
+        Ou acesse validanota.com.br
+      </a>
+    </div>
+  </div>
+
+</div><!-- .page -->
+
+</body>
+</html>
