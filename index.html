@@ -237,6 +237,7 @@
         </div>
       </div>
       <a href="#piloto"
+         onclick="gtag('event', 'quero_participar', { source: 'landing_page', cta_location: 'navbar' })"
          class="btn-shimmer bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors whitespace-nowrap">
         <span class="sm:hidden">Quero o Piloto</span>
         <span class="hidden sm:inline">Quero o Piloto — {{PRICE_PILOT_FMT}}</span>
@@ -275,8 +276,9 @@
       <!-- Primary CTA -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
         <a href="#piloto"
+           onclick="gtag('event', 'quero_participar', { source: 'landing_page', cta_location: 'hero' })"
            class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
-          Quero participar do piloto →
+          Quero participar do piloto
         </a>
         <a
           href="validador_fiscal/valida_nota_apresentacao.pdf"
@@ -289,6 +291,7 @@
       <div class="mb-8">
         <a href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Prefiro%20falar%20antes%20sobre%20o%20piloto%20Valida Nota"
            target="_blank"
+           onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'hero' })"
            class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
           Prefere falar antes? Chame no WhatsApp
         </a>
@@ -622,6 +625,7 @@
 
             <!-- CTA Button -->
             <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
+               onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'cta_main' })"
                target="_blank"
                class="btn-shimmer block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg text-center px-8 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/20 hover:scale-105 mb-3">
               Quero garantir minha vaga →
@@ -755,8 +759,9 @@
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#piloto"
+          onclick="gtag('event', 'quero_participar', { source: 'landing_page', cta_location: 'cta_final' })"
            class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
-          Quero participar do piloto →
+          Quero participar do piloto
         </a>
         <a
           href="/downloads/valida_nota_apresentacao.pdf"
@@ -769,6 +774,7 @@
       <div class="mt-4">
         <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
            target="_blank"
+           onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'cta_final' })"
            class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
           Prefiro falar no WhatsApp primeiro
         </a>
