@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloqueia acesso a arquivos internos desnecessários para indexação
+Disallow: /validador_fiscal/config.js
+
+Sitemap: https://tributolab.com.br/sitemap.xml
