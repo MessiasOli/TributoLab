@@ -4,33 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ═══ SEO PRIMARY ════════════════════════════════════════════════════ -->
-  <title>Valida Nota — Valide NF-e e NFS-e antes do fechamento | validanota</title>
-  <meta name="description" content="Piloto para escritórios contábeis e pequenas empresas que querem identificar inconsistências em notas já emitidas e reduzir retrabalho no fechamento — sem trocar de emissor." />
-  <meta name="keywords" content="validação NF-e, validação NFS-e, validação fiscal, auditoria de notas fiscais, escritório contábil, inconsistências fiscais, reforma tributária 2026, CBS, IBS, CFOP errado, alíquota ISS" />
+  <title>Valida Nota - Diagnóstico fiscal automatizado para NF-e e NFS-e</title>
+  <meta name="description" content="Valida Nota analisa XMLs de NF-e e NFS-e, prioriza inconsistências fiscais e gera relatório executivo com evidência operacional para fechamento e revisão contábil." />
+  <meta name="keywords" content="Valida Nota, validação fiscal, auditoria NF-e, auditoria NFS-e, relatório fiscal, reforma tributária, CBS, IBS, XML fiscal, escritório contábil" />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="validanota" />
+  <meta name="author" content="Valida Nota" />
   <link rel="canonical" href="https://validanota.com.br/" />
+  <link rel="icon" href="validador_fiscal/assets/favicon.ico" type="image/x-icon" />
 
-  <!-- ═══ FAVICON ════════════════════════════════════════════════════════ -->
-  <link rel="icon" href="validador_fiscal/assets/favicon.png" type="image/png" />
-
-  <!-- ═══ OPEN GRAPH (Facebook / LinkedIn / WhatsApp) ════════════════════ -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://validanota.com.br/" />
-  <meta property="og:title" content="Valida Nota — Valide NF-e e NFS-e antes do fechamento" />
-  <meta property="og:description" content="Identifique inconsistências em notas já emitidas antes do fechamento — sem trocar de emissor. Piloto para escritórios contábeis e PMEs." />
-  <meta property="og:image" content="https://validanota.com.br/validador_fiscal/assets/logo_validanota.png" />
+  <meta property="og:title" content="Valida Nota - Diagnóstico fiscal automatizado" />
+  <meta property="og:description" content="Relatório executivo real, fila de revisão e rastreabilidade para NF-e e NFS-e." />
+  <meta property="og:image" content="https://validanota.com.br/validador_fiscal/assets/logo_validanota_2026.png" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="validanota" />
+  <meta property="og:site_name" content="Valida Nota" />
 
-  <!-- ═══ TWITTER CARD ═══════════════════════════════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Valida Nota — Valide NF-e e NFS-e antes do fechamento" />
-  <meta name="twitter:description" content="Identifique inconsistências em notas já emitidas antes do fechamento — sem trocar de emissor." />
-  <meta name="twitter:image" content="https://validanota.com.br/validador_fiscal/assets/logo_validanota.png" />
+  <meta name="twitter:title" content="Valida Nota - Diagnóstico fiscal automatizado" />
+  <meta name="twitter:description" content="Analise XMLs, priorize inconsistências e entregue relatório executivo com evidência operacional." />
+  <meta name="twitter:image" content="https://validanota.com.br/validador_fiscal/assets/logo_validanota_2026.png" />
 
-  <!-- ═══ JSON-LD STRUCTURED DATA ════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,35 +32,24 @@
       {
         "@type": "Organization",
         "@id": "https://validanota.com.br/#organization",
-        "name": "validanota",
+        "name": "Valida Nota",
         "url": "https://validanota.com.br",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://validanota.com.br/validador_fiscal/assets/logo_validanota.png"
+          "url": "https://validanota.com.br/validador_fiscal/assets/logo_validanota_2026.png"
         }
       },
       {
-        "@type": "WebPage",
-        "@id": "https://validanota.com.br/#webpage",
-        "url": "https://validanota.com.br/",
-        "name": "Valida Nota — Valide NF-e e NFS-e antes do fechamento",
-        "description": "Piloto para escritórios contábeis e pequenas empresas que querem identificar inconsistências em notas já emitidas e reduzir retrabalho no fechamento.",
-        "publisher": { "@id": "https://validanota.com.br/#organization" },
-        "inLanguage": "pt-BR"
-      },
-      {
-        "@type": "Service",
-        "name": "Valida Nota — Piloto de Validação de NF-e e NFS-e",
-        "provider": { "@id": "https://validanota.com.br/#organization" },
-        "description": "Auditoria automática de NF-e e NFS-e já emitidas: valida código de serviço, alíquota, retenção, CBS/IBS e outros campos críticos antes do fechamento contábil.",
-        "serviceType": "Auditoria Fiscal Automatizada",
-        "areaServed": "BR",
+        "@type": "SoftwareApplication",
+        "name": "Valida Nota",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Software de diagnóstico fiscal automatizado para XMLs de NF-e e NFS-e, com relatório executivo, fila de revisão, trilha de auditoria e telemetria de cobertura.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "BRL",
           "price": "490",
-          "availability": "https://schema.org/LimitedAvailability",
-          "validFrom": "2026-04-01"
+          "availability": "https://schema.org/LimitedAvailability"
         }
       }
     ]
@@ -79,752 +62,528 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              50:  '#f0fdf4',
-              100: '#dcfce7',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              900: '#14532d',
-            },
-            danger: '#ef4444',
-            dark: '#0f172a',
+            ink: '#0d1b2a',
+            navy: '#102a43',
+            teal: '#0f766e',
+            mint: '#2dd4bf',
+            amber: '#f59e0b',
+            coral: '#ef6351'
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
           },
-        },
-      },
+          boxShadow: {
+            soft: '0 24px 80px rgba(15, 23, 42, 0.12)'
+          }
+        }
+      }
     };
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Variáveis da oferta — gerado por scripts/render_copy.py a partir do .env -->
   <script src="validador_fiscal/config.js"></script>
+
   <style>
     html { scroll-behavior: smooth; }
-    .gradient-hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f2d1f 100%);
+    body { font-feature-settings: "cv02", "cv03", "cv04", "cv11"; }
+    .hero-bg {
+      background:
+        linear-gradient(180deg, rgba(13, 27, 42, 0.88), rgba(13, 27, 42, 0.96)),
+        radial-gradient(circle at 18% 20%, rgba(45, 212, 191, 0.24), transparent 30%),
+        radial-gradient(circle at 78% 28%, rgba(245, 158, 11, 0.16), transparent 28%),
+        #0d1b2a;
     }
-    .card-glow {
-      box-shadow: 0 0 0 1px rgba(34,197,94,0.15), 0 8px 32px rgba(34,197,94,0.08);
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 86%);
     }
-    .badge-pulse::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22c55e;
-      margin-right: 8px;
-      animation: pulse 1.6s ease-in-out infinite;
+    .metric-tile {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.4; transform: scale(1.3); }
+    .report-page {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      box-shadow: 0 32px 90px rgba(15, 23, 42, 0.28);
     }
-    .timeline-line::before {
-      content: '';
-      position: absolute;
-      left: 19px;
-      top: 40px;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, #22c55e, transparent);
+    .section-kicker {
+      color: #0f766e;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 800;
     }
-    .sticky-cta {
-      backdrop-filter: blur(10px);
-      background: rgba(15,23,42,0.92);
+    .btn {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
-
-    /* ── UX enhancements ──────────────────────────── */
-    /* Scroll-reveal */
+    .btn:hover { transform: translateY(-1px); }
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1);
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
     }
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    /* Stagger children of reveal */
-    .reveal-stagger > * {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
-    }
-    .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay: 0.05s; }
-    .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay: 0.15s; }
-    .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay: 0.25s; }
-    .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay: 0.35s; }
-    /* Card hover lift */
-    .card-lift {
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
-    }
-    .card-lift:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.10);
-    }
-    /* Button shimmer */
-    .btn-shimmer {
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-shimmer::after {
-      content: '';
-      position: absolute;
-      top: -50%; left: -80%;
-      width: 45%; height: 200%;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.22), transparent);
-      transform: skewX(-18deg);
-    }
-    .btn-shimmer:hover::after {
-      animation: shimmer 0.55s ease;
-    }
-    @keyframes shimmer {
-      from { left: -80%; }
-      to   { left: 130%; }
-    }
-    /* Hero headline glow */
-    .text-glow {
-      text-shadow: 0 0 48px rgba(34,197,94,0.40), 0 0 12px rgba(34,197,94,0.20);
-    }
-    /* FAQ slide open */
-    details[open] summary ~ * {
-      animation: faqOpen 0.28s ease-out;
-    }
-    @keyframes faqOpen {
-      from { opacity:0; transform:translateY(-6px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-    /* Details marker hide (cross-browser) */
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
-    /* Chip hover */
-    .chip-hover {
-      transition: background 0.18s, border-color 0.18s, color 0.18s;
-    }
-    .chip-hover:hover {
-      background: rgba(34,197,94,0.15);
-      border-color: rgba(34,197,94,0.5);
-      color: #86efac;
-    }
   </style>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BV0XQWEZ7L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="font-sans bg-slate-50 text-slate-800 antialiased">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BV0XQWEZ7L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BV0XQWEZ7L');
+  </script>
 
-  gtag('config', 'G-BV0XQWEZ7L');
-</script>
-
-<body class="font-sans bg-white text-slate-800 antialiased">
-
-  <!-- ═══════════════════════════════════════════════
-       STICKY NAVBAR
-  ═══════════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 sticky-cta border-b border-slate-700/50">
-    <div class="max-w-6xl mx-auto px-4 py-2 sm:py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <div class="bg-white rounded-xl px-2 py-0.5 sm:px-3 sm:py-1 flex items-center">
-          <img src="validador_fiscal/assets/logo_validanota.png" alt="validanota" class="h-8 sm:h-12 w-auto" />
-        </div>
-      </div>
-      <a href="#piloto"
-         onclick="gtag('event', 'quero_participar1', { source: 'landing_page', cta_location: 'navbar' })"
-         class="btn-shimmer bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors whitespace-nowrap">
-        <span class="sm:hidden">Quero o Piloto</span>
-        <span class="hidden sm:inline">Quero o Piloto — {{PRICE_PILOT_FMT}}</span>
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#topo" class="flex items-center gap-3" aria-label="Valida Nota">
+        <img src="validador_fiscal/assets/logo_validanota_2026.png" alt="Valida Nota" class="h-12 w-auto sm:h-12" />
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#produto" class="hover:text-slate-950">Produto</a>
+        <a href="#relatorio" class="hover:text-slate-950">Relatório</a>
+        <a href="#cobertura" class="hover:text-slate-950">Cobertura</a>
+        <a href="#oferta" class="hover:text-slate-950">Piloto</a>
+      </nav>
+      <a
+        href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Quero%20avaliar%20o%20Valida%20Nota%20para%20meu%20escrit%C3%B3rio"
+        target="_blank"
+        onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'navbar' })"
+        class="btn rounded-lg bg-mint px-4 py-2 text-sm font-bold text-ink shadow-lg shadow-teal-950/30 hover:bg-teal-300"
+      >
+        Falar com o fundador
       </a>
     </div>
   </header>
 
-  <!-- ═══════════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════════ -->
-  <section class="gradient-hero text-white pt-16 pb-24 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 text-brand-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
-        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-        </svg>
-        Piloto fundador com vagas abertas — abril de 2026
-      </div>
-
-      <!-- Headline -->
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-        Evite notas erradas antes que<br class="hidden sm:block" />
-        virem <span class="text-brand-500 text-glow">retrabalho no fechamento.</span>
-      </h1>
-
-      <!-- Sub-headline -->
-      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
-        Piloto para escritórios contábeis e pequenas empresas que querem
-        <strong class="text-white">validar NF-e e NFS-e já emitidas</strong>,
-        identificar inconsistências mais cedo e reduzir correções de última hora
-        — sem trocar de emissor.
-      </p>
-
-      <!-- Primary CTA -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-        <a href="#piloto"
-           onclick="gtag('event', 'quero_participar2', { source: 'landing_page', cta_location: 'hero' })"
-           class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
-          Quero participar do piloto
-        </a>
-        <a
-          href="validador_fiscal/valida_nota_apresentacao.pdf"
-          download
-          onclick="gtag('event', 'download_pdf1', { file_name: 'valida_nota_apresentacao.pdf', source: 'landing_page', cta_location: 'hero' })"
-          class="btn-shimmer w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all hover:scale-105">
-          Baixar apresentação em PDF
-        </a>
-      </div>
-      <div class="mb-8">
-        <a href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Prefiro%20falar%20antes%20sobre%20o%20piloto%20Valida Nota"
-           target="_blank"
-           onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'hero' })"
-           class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
-          Prefere falar antes? Chame no WhatsApp
-        </a>
-      </div>
-
-      <!-- Chips de prova -->
-      <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
-        <span class="chip-hover inline-flex items-center gap-2 bg-white/10 border border-white/20 text-slate-200 text-xs font-semibold px-4 py-2 rounded-full">✓ Piloto pago e limitado</span>
-        <span class="chip-hover inline-flex items-center gap-2 bg-white/10 border border-white/20 text-slate-200 text-xs font-semibold px-4 py-2 rounded-full">✓ Sem trocar ERP / emissor</span>
-        <span class="chip-hover inline-flex items-center gap-2 bg-white/10 border border-white/20 text-slate-200 text-xs font-semibold px-4 py-2 rounded-full">✓ Primeiro fluxo em até 14 dias</span>
-      </div>
-
-      <!-- Social proof micro -->
-      <p class="text-slate-500 text-sm badge-pulse">
-        Apenas {{SLOTS_PER_MONTH}} vagas por mês para manter a qualidade do acompanhamento
-      </p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       DOR + BENEFÍCIOS
-  ═══════════════════════════════════════════════ -->
-  <section class="bg-slate-50 py-16 px-4 border-b border-slate-200">
-    <div class="max-w-5xl mx-auto">
-      <!-- Dor central -->
-      <div class="text-center mb-12 reveal">
-        <p class="text-lg sm:text-xl text-slate-700 max-w-3xl mx-auto font-medium leading-relaxed">
-          Se o erro só aparece no fechamento, <strong>sua equipe paga duas vezes:</strong><br class="hidden sm:block" />
-          na correção e no tempo perdido para descobrir o que precisa ser revisado.
-        </p>
-      </div>
-      <!-- 3 benefícios concretos -->
-      <div class="grid sm:grid-cols-3 gap-6 reveal-stagger">
-        <div class="card-lift bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+  <main id="topo">
+    <section class="hero-bg relative overflow-hidden text-white">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-24">
+        <div class="max-w-3xl self-center">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-mint/30 bg-mint/10 px-4 py-2 text-sm font-bold text-teal-100">
+            <span class="h-2 w-2 rounded-full bg-mint"></span>
+            Relatório executivo oficial emitido em 23/04/2026
           </div>
-          <h3 class="font-bold text-slate-800 mb-2">Menos retrabalho operacional</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">Inconsistências identificadas antes do fechamento, não depois. Menos correção de emergência, menos sobrecarga da equipe.</p>
-        </div>
-        <div class="card-lift bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-slate-800 mb-2">Mais visibilidade antes do fechamento</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">Saiba o que precisa de atenção com antecedência. Priorize o que importa, sem revisar tudo manualmente.</p>
-        </div>
-        <div class="card-lift bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h8"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-slate-800 mb-2">Prioridade no que realmente importa</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">Uma fila priorizada por severidade. Seu time foca no que precisa de revisão, não no que já está correto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       DOR QUALIFICADA
-  ═══════════════════════════════════════════════ -->
-  <section class="py-20 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 reveal">
-        Reconhece algum destes cenários?
-      </h2>
-      <p class="text-center text-slate-500 mb-12 reveal">Se sim, o Valida Nota foi feito para o seu escritório.</p>
-      <div class="space-y-4 reveal-stagger">
-        <!-- Pain items -->
-        <div class="card-lift flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5">
-          <span class="text-danger text-2xl leading-none mt-0.5">✗</span>
-          <div>
-            <p class="font-semibold text-slate-800">Nota emitida com CFOP errado — e ninguém viu antes de passar o prazo de cancelamento.</p>
-            <p class="text-sm text-slate-500 mt-1">Resultado: carta de correção, cliente reclamando e horas do seu melhor analista resolvendo o problema.</p>
-          </div>
-        </div>
-        <div class="card-lift flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5">
-          <span class="text-danger text-2xl leading-none mt-0.5">✗</span>
-          <div>
-            <p class="font-semibold text-slate-800">Alíquota de ISS divergente do padrão histórico do cliente — descoberta só na apuração do mês.</p>
-            <p class="text-sm text-slate-500 mt-1">Resultado: guia paga a mais, retificação, e o contador mais sênior "apagando incêndio" no lugar de crescer o negócio.</p>
-          </div>
-        </div>
-        <div class="card-lift flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5">
-          <span class="text-danger text-2xl leading-none mt-0.5">✗</span>
-          <div>
-            <p class="font-semibold text-slate-800">Campos CBS/IBS ausentes ou preenchidos errado — risco real com a Reforma Tributária em 2026.</p>
-            <p class="text-sm text-slate-500 mt-1">Resultado: exposição fiscal crescente enquanto a legislação é exigida progressivamente.</p>
-          </div>
-        </div>
-        <div class="card-lift flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5">
-          <span class="text-danger text-2xl leading-none mt-0.5">✗</span>
-          <div>
-            <p class="font-semibold text-slate-800">Nota duplicada enviada ao cliente — e o sistema não avisou nada.</p>
-            <p class="text-sm text-slate-500 mt-1">Resultado: tributo em duplicidade, constrangimento com o cliente e retrabalho que ninguém queria ter.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       SOLUÇÃO
-  ═══════════════════════════════════════════════ -->
-  <section class="bg-slate-900 text-white py-20 px-4" id="como-funciona">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14 reveal">
-        <span class="inline-block bg-brand-500/10 text-brand-500 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4">A solução</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
-          Uma camada de auditoria que age<br class="hidden sm:block" /> <span class="text-brand-500">antes que o erro vire problema</span>
-        </h2>
-        <p class="text-slate-400 max-w-2xl mx-auto">
-          O Valida Nota analisa cada nota emitida pela sua carteira, detecta inconsistências em tempo real
-          e te alerta enquanto ainda dá para cancelar sem custo.
-        </p>
-      </div>
-
-      <!-- Steps -->
-      <div class="grid sm:grid-cols-3 gap-8 reveal-stagger">
-        <div class="relative text-center">
-          <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span class="text-brand-500 text-2xl font-black">1</span>
-          </div>
-          <h3 class="font-bold text-lg mb-2">Você exporta XML ou planilha</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Exporte um lote de XMLs ou CSV do sistema que você já usa. Sem integração pesada, sem trocar nada no fluxo atual.
+          <h1 class="text-4xl font-black leading-[1.04] sm:text-5xl lg:text-6xl">
+            Diagnóstico fiscal automatizado para saber o que corrigir antes do fechamento.
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+            O Valida Nota recebe XMLs de NF-e e NFS-e, aplica regras versionadas, separa achados acionáveis de telemetria interna e entrega um relatório executivo pronto para decisão.
           </p>
-        </div>
-        <div class="relative text-center">
-          <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span class="text-brand-500 text-2xl font-black">2</span>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="validador_fiscal/relatorio-executivo-2026-04-23.pdf"
+              download
+              onclick="gtag('event', 'download_pdf', { file_name: 'relatorio-executivo-2026-04-23.pdf', source: 'landing_page', cta_location: 'hero' })"
+              class="btn inline-flex items-center justify-center rounded-xl bg-mint px-7 py-4 text-base font-black text-ink shadow-lg shadow-teal-950/40 hover:bg-teal-300"
+            >
+              Baixar relatório real
+            </a>
+            <a
+              href="#oferta"
+              onclick="gtag('event', 'quero_participar', { source: 'landing_page', cta_location: 'hero' })"
+              class="btn inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/10 px-7 py-4 text-base font-black text-white hover:bg-white/15"
+            >
+              Ver piloto fundador
+            </a>
           </div>
-          <h3 class="font-bold text-lg mb-2">Classificamos as inconsistências</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Processamos e identificamos divergências por severidade — código de serviço, alíquota, retenção, tomador, CBS/IBS, duplicidade de RPS, histórico e mais.
-          </p>
-        </div>
-        <div class="relative text-center">
-          <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <span class="text-brand-500 text-2xl font-black">3</span>
+          <div class="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-slate-200">
+            <span class="rounded-full border border-white/15 bg-white/[0.08] px-4 py-2">NF-e 4.00</span>
+            <span class="rounded-full border border-white/15 bg-white/[0.08] px-4 py-2">NFS-e nacional e legada</span>
+            <span class="rounded-full border border-white/15 bg-white/[0.08] px-4 py-2">RTC, IBS e CBS</span>
+            <span class="rounded-full border border-white/15 bg-white/[0.08] px-4 py-2">Trilha de auditoria</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">Você recebe uma fila priorizada</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Um relatório com o que revisar primeiro, ordenado por severidade. Foco no que realmente precisa de atenção, dentro da janela de correção.
-          </p>
         </div>
-      </div>
 
-      <!-- What we validate -->
-      <div class="mt-16 bg-slate-800/60 border border-slate-700 rounded-2xl p-8">
-        <h3 class="font-bold text-lg mb-2 text-center">O que validamos em cada nota</h3>
-        <p class="text-center text-slate-500 text-xs mb-6">
-          <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500 inline-block"></span> bloqueio</span>
-          <span class="mx-3 inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-orange-400 inline-block"></span> bloqueio preventivo</span>
-          <span class="mx-3 inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400 inline-block"></span> alerta forte</span>
-          <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-400 inline-block"></span> alerta operacional</span>
-        </p>
-        <div class="grid sm:grid-cols-2 gap-3">
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Código de serviço municipal</span> <span class="inline-block bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Alíquota incoerente com parâmetro municipal</span> <span class="inline-block bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Retenção: tomador × regime × intermediário</span> <span class="inline-block bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Tomador PJ: CNPJ, endereço, cidade/UF e IM</span> <span class="inline-block bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Certificado digital: validade, thumbprint e cadeia ICP-Brasil</span> <span class="inline-block bg-orange-500/20 text-orange-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio preventivo</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">CBS/IBS preenchido de forma inconsistente (padrão 2026)</span> <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-2 py-0.5 rounded-full">alerta forte</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Duplicidade de RPS por chave idempotente</span> <span class="inline-block bg-red-500/20 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-full">bloqueio</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Drift de legislação e regras locais (watcher semanal)</span> <span class="inline-block bg-slate-500/30 text-slate-400 text-xs font-semibold px-2 py-0.5 rounded-full">alerta operacional</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Histórico: alíquota, retenção ou código fora do padrão anterior</span> <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-2 py-0.5 rounded-full">alerta forte</span></div>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <div><span class="text-slate-300">Indisponibilidade do ente: healthcheck e fallback RPS</span> <span class="inline-block bg-slate-500/30 text-slate-400 text-xs font-semibold px-2 py-0.5 rounded-full">alerta operacional</span></div>
-          </div>
-        </div>
-        <!-- Sem substituição -->
-        <div class="mt-8 bg-brand-500/10 border border-brand-500/30 rounded-xl p-6 text-center">
-          <p class="text-white font-semibold text-lg mb-1">O piloto não substitui o seu emissor.</p>
-          <p class="text-slate-400 text-sm">Ele opera <strong class="text-slate-200">por cima do fluxo que você já utiliza hoje</strong> — sem trocar ERP, sem integração pesada, sem mudar o processo atual.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       CUSTO DO RETRABALHO
-  ═══════════════════════════════════════════════ -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Quanto custa o retrabalho do seu time?</h2>
-        <p class="text-slate-500 max-w-xl mx-auto">Se o seu time corrige notas manualmente todo mês, o custo do retrabalho já existe. O piloto existe para mostrar quanto desse retrabalho pode ser antecipado e reduzido.</p>
-      </div>
-      <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 sm:p-12 reveal">
-        <div class="text-center mb-8">
-          <p class="text-slate-400 text-sm uppercase tracking-widest font-semibold mb-5">Fórmula do custo de retrabalho</p>
-          <div class="bg-slate-700/50 border border-slate-600 rounded-2xl px-6 py-5 inline-block text-left">
-            <p class="text-white text-base sm:text-lg font-semibold leading-relaxed">
-              Perda mensal estimada =<br />
-              <span class="text-brand-400">quantidade de correções</span>
-              <span class="text-slate-400 mx-2">×</span>
-              <span class="text-amber-400">tempo médio por correção</span>
-              <span class="text-slate-400 mx-2">×</span>
-              <span class="text-red-400">custo/hora do time</span>
-            </p>
-          </div>
-          <p class="text-slate-400 text-sm mt-4">Isso permite que você faça a conta com os seus números reais — sem depender de estimativas genéricas.</p>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-6 pt-6 border-t border-slate-700">
-          <div class="text-center">
-            <p class="text-brand-400 font-bold text-lg mb-1">Menos correções</p>
-            <p class="text-slate-400 text-sm">Inconsistências detectadas antes do fechamento, não depois</p>
-          </div>
-          <div class="text-center">
-            <p class="text-amber-400 font-bold text-lg mb-1">Menos tempo perdido</p>
-            <p class="text-slate-400 text-sm">Fila priorizada do que revisar primeiro, sem varredura manual</p>
-          </div>
-          <div class="text-center">
-            <p class="text-red-400 font-bold text-lg mb-1">Custo visível</p>
-            <p class="text-slate-400 text-sm">O piloto existe para tornar esse custo concreto — não estimado</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       OFERTA DO PILOTO
-  ═══════════════════════════════════════════════ -->
-  <section class="bg-brand-50 py-20 px-4" id="piloto">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <span class="inline-block bg-brand-500/10 text-brand-700 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4 border border-brand-200">Oferta de piloto</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
-          Teste sem risco. Pague só se fizer sentido.
-        </h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          Antes de assinar qualquer mensalidade, faça um piloto real com os documentos do seu escritório
-          e veja com os próprios olhos o que estamos detectando.
-        </p>
-      </div>
-
-      <!-- Pilot card -->
-      <div class="bg-white rounded-3xl shadow-xl card-glow p-8 sm:p-12 border border-brand-100 reveal">
-        <div class="grid sm:grid-cols-2 gap-10">
-          <!-- Left: what's included -->
-          <div>
-            <h3 class="font-extrabold text-2xl mb-6">
-              Piloto Fundador — Valida Nota<br />
-              <span class="text-brand-600">— Escopo definido, limite claro</span>
-            </h3>
-            <ul class="space-y-3">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700">Recebimento das notas por <strong>XML, planilha ou exportação equivalente</strong> — sem integração pesada</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700"><strong>Validação de até {{PILOT_DOCS_MAX}} notas</strong>, priorizadas por severidade</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700"><strong>Relatório com fila priorizada</strong> do que revisar primeiro (PDF + CSV)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700"><strong>1 call de diagnóstico</strong> ({{EFFORT_MINUTES}} min) + devolutiva ao final do piloto</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700">Recomendação prática de <strong>próximos passos</strong> para o seu fluxo de emissão</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span class="text-slate-700"><strong>Acompanhamento direto com o fundador</strong> durante todo o piloto</span>
-              </li>
-            </ul>
+        <div class="relative self-center">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="metric-tile rounded-2xl p-5">
+              <p class="text-sm font-bold text-slate-300">Documentos analisados</p>
+              <p class="mt-3 text-4xl font-black">3</p>
+              <p class="mt-2 text-sm text-slate-300">lote executivo emitido</p>
+            </div>
+            <div class="metric-tile rounded-2xl p-5">
+              <p class="text-sm font-bold text-slate-300">Exigem ação</p>
+              <p class="mt-3 text-4xl font-black text-coral">2</p>
+              <p class="mt-2 text-sm text-slate-300">bloqueios priorizados</p>
+            </div>
+            <div class="metric-tile rounded-2xl p-5">
+              <p class="text-sm font-bold text-slate-300">Sem achados</p>
+              <p class="mt-3 text-4xl font-black text-mint">1</p>
+              <p class="mt-2 text-sm text-slate-300">dentro das regras suportadas</p>
+            </div>
+            <div class="metric-tile rounded-2xl p-5">
+              <p class="text-sm font-bold text-slate-300">Rule pack</p>
+              <p class="mt-3 text-2xl font-black">core_validacao</p>
+              <p class="mt-2 text-sm text-slate-300">versão rastreável</p>
+            </div>
           </div>
 
-          <!-- Right: price + CTA -->
-          <div class="flex flex-col justify-between">
-            <div>
-              <!-- Anchor price -->
-              <div class="text-sm text-slate-400 mb-1">Preço de implantação completo: <span class="line-through">{{PRICE_SETUP_FMT}}</span></div>
-              <!-- Pilot price -->
-              <div class="flex items-end gap-2 mb-1">
-                <span class="text-5xl font-black text-slate-900">{{PRICE_PILOT_FMT}}</span>
-                <span class="text-slate-500 mb-2 text-sm">/ piloto único</span>
+          <div class="report-page mt-5 rounded-2xl p-5 text-slate-900">
+            <div class="flex items-start justify-between gap-4 border-b border-slate-200 pb-4">
+              <div>
+                <p class="text-xs font-black uppercase text-teal">Relatório executivo</p>
+                <h2 class="mt-1 text-xl font-black">Diagnóstico Fiscal Automatizado</h2>
               </div>
-              <p class="text-xs text-brand-700 font-semibold bg-brand-100 border border-brand-200 rounded-lg px-3 py-2 mb-6 inline-block">
-                Este valor é <strong>abatido integralmente</strong> no setup se você contratar o plano mensal em até {{DAYS_TO_CLOSE}} dias após o piloto.
-              </p>
-
-              <!-- Urgency -->
-              <div class="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">
-                <p class="text-amber-800 text-sm font-medium">
-                  ⏳ Apenas <strong>{{SLOTS_PER_MONTH}} vagas por mês</strong> para não comprometer a qualidade da auditoria.
-                </p>
+              <span class="rounded-full bg-slate-900 px-3 py-1 text-xs font-bold text-white">23/04/2026</span>
+            </div>
+            <div class="mt-5 space-y-3">
+              <div class="rounded-xl border border-red-100 bg-red-50 p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-black text-slate-900">NFE.UB12-10</p>
+                  <span class="rounded-full bg-red-600 px-3 py-1 text-xs font-bold text-white">2 ocorrências</span>
+                </div>
+                <p class="mt-2 text-sm text-slate-600">Grupo IBSCBS obrigatório conforme NT 2025.002.</p>
+              </div>
+              <div class="rounded-xl border border-amber-100 bg-amber-50 p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-black text-slate-900">NFE.B004</p>
+                  <span class="rounded-full bg-amber px-3 py-1 text-xs font-bold text-white">1 alerta</span>
+                </div>
+                <p class="mt-2 text-sm text-slate-600">Benefício fiscal informado sem cBenef obrigatório.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-bold text-slate-500">Parecer Valida Nota</p>
+                <p class="mt-1 text-sm text-slate-700">Não prosseguir com documentos bloqueados até corrigir inconsistências e reprocessar os XMLs.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- CTA Button -->
-            <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
-               onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'cta_main' })"
-               target="_blank"
-               class="btn-shimmer block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg text-center px-8 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/20 hover:scale-105 mb-3">
-              Quero garantir minha vaga →
-            </a>
-            <p class="text-xs text-center text-slate-400">
-              Clique e fale com a gente no WhatsApp. Resposta em até 2 horas.
+    <section id="produto" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl reveal">
+          <p class="section-kicker">Produto em operação</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Não é promessa de landing. O fluxo já produz evidência.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            A realidade atual do software é um pipeline completo: importação de documentos, normalização, execução de regras fiscais, priorização, relatório de cliente e telemetria administrativa.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-teal text-white">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.9A5 5 0 0116 6a5 5 0 014 4.9A3.5 3.5 0 0116.5 18H8a3 3 0 01-1-5.83" /></svg>
+            </div>
+            <h3 class="text-lg font-black text-slate-950">Importação em lote</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Upload de múltiplos XMLs, identificação de família documental e processamento individual para cada nota.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-amber text-white">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="text-lg font-black text-slate-950">Regras versionadas</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">NF-e, NFS-e, eventos, rule packs e regras RTC como NFE.UB12-10, NFE.UB13-40 e NFE.UB14-*.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-coral text-white">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m0 4h.01M4.93 19h14.14a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.2 16a2 2 0 001.73 3z" /></svg>
+            </div>
+            <h3 class="text-lg font-black text-slate-950">Fila priorizada</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Bloqueios primeiro, alertas fortes depois, documentos sem achados separados do que exige revisão.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-white">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-6m3 6v-4M5 21h14a2 2 0 002-2V7.5L15.5 2H5a2 2 0 00-2 2v15a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="text-lg font-black text-slate-950">Relatório executivo</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Sumário, achados principais, interpretação, decisões por documento e parecer operacional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="relatorio" class="bg-slate-100 px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="reveal">
+          <p class="section-kicker">Entregável principal</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">O cliente recebe um relatório limpo, acionável e defensável.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            O relatório de cliente não mistura regra não aplicável com falha fiscal. Ele mostra apenas o que precisa de decisão, correção ou acompanhamento.
+          </p>
+          <a
+            href="validador_fiscal/relatorio-executivo-2026-04-23.pdf"
+            download
+            onclick="gtag('event', 'download_pdf', { file_name: 'relatorio-executivo-2026-04-23.pdf', source: 'landing_page', cta_location: 'report_section' })"
+            class="btn mt-8 inline-flex rounded-xl bg-ink px-6 py-4 text-base font-black text-white shadow-soft hover:bg-navy"
+          >
+            Abrir o relatório emitido
+          </a>
+        </div>
+
+        <div class="reveal rounded-3xl bg-white p-6 shadow-soft">
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <p class="text-sm font-black text-teal">Indicadores principais</p>
+              <p class="mt-3 text-4xl font-black text-slate-950">33%</p>
+              <p class="mt-2 text-sm text-slate-600">conformidade no lote analisado</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <p class="text-sm font-black text-teal">Status final</p>
+              <p class="mt-3 text-4xl font-black text-slate-950">67%</p>
+              <p class="mt-2 text-sm text-slate-600">bloqueados e com próxima ação</p>
+            </div>
+          </div>
+          <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-slate-50 text-xs font-black uppercase text-slate-500">
+                <tr>
+                  <th class="px-4 py-3">Regra</th>
+                  <th class="px-4 py-3">Achado</th>
+                  <th class="px-4 py-3">Ocorrências</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white">
+                <tr>
+                  <td class="px-4 py-4 font-black text-slate-950">NFE.UB12-10</td>
+                  <td class="px-4 py-4 text-slate-600">Grupo IBSCBS obrigatório</td>
+                  <td class="px-4 py-4 font-black text-coral">2</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 font-black text-slate-950">NFE.B004</td>
+                  <td class="px-4 py-4 text-slate-600">cBenef obrigatório</td>
+                  <td class="px-4 py-4 font-black text-amber">1</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-4 font-black text-slate-950">NFE.B003</td>
+                  <td class="px-4 py-4 text-slate-600">NCM ausente ou inválido</td>
+                  <td class="px-4 py-4 font-black text-coral">1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-600">
+            Parecer: documentos bloqueados não devem prosseguir até correção e reprocessamento. O relatório apoia triagem operacional e não substitui responsabilidade contábil, fiscal ou jurídica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cobertura" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <p class="section-kicker">Cobertura honesta</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">O produto sabe diferenciar erro fiscal, escopo e suporte.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            Essa distinção é essencial para vender com segurança: documento fora do escopo contratado não vira falha fiscal, e tipo não suportado não aparece como regra reprovada.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          <div class="reveal rounded-3xl border border-slate-200 bg-slate-50 p-7">
+            <h3 class="text-xl font-black text-slate-950">Relatório do cliente</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+              <li>Achados acionáveis: bloqueios, alertas fortes e ações recomendadas.</li>
+              <li>Regra, severidade, motivo, evidência e referência quando aplicável.</li>
+              <li>Sem ruído de regra aprovada ou regra não aplicável.</li>
+            </ul>
+          </div>
+          <div class="reveal rounded-3xl border border-slate-200 bg-slate-50 p-7">
+            <h3 class="text-xl font-black text-slate-950">Telemetria interna</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+              <li>execution_ms, outcome, severity, fallback_applied e skip_reason.</li>
+              <li>Cobertura por documento, município, canal emissor e rule pack.</li>
+              <li>Backlog visível para evolução do motor.</li>
+            </ul>
+          </div>
+          <div class="reveal rounded-3xl border border-slate-200 bg-slate-50 p-7">
+            <h3 class="text-xl font-black text-slate-950">Estados claros</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+              <li>ok, requires_review, blocked e processing_error.</li>
+              <li>out_of_scope para escopo ativo do tenant.</li>
+              <li>unsupported_document para tipo, layout ou canal sem suporte.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ink px-4 py-20 text-white sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="reveal">
+            <p class="font-black uppercase text-mint">Para escritório contábil e operação fiscal</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">A tela principal não é um enfeite. É uma mesa de trabalho.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300">
+              O gestor vê a saúde do lote. O operador sabe qual documento tratar primeiro. O administrador acompanha cobertura e gargalos sem contaminar o relatório entregue ao cliente.
             </p>
           </div>
+          <div class="reveal grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+              <p class="text-sm font-black text-mint">Painel por lote</p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">Total processado, status final, bloqueios, alertas e documentos sem achados.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+              <p class="text-sm font-black text-mint">Ajuda por regra</p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">Glossário fiscal e explicações por RULE_ID para reduzir dúvida operacional.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+              <p class="text-sm font-black text-mint">Auditoria</p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">Versão do rule pack, correlação, status e evidência preservados por documento.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+              <p class="text-sm font-black text-mint">Admin founder</p>
+              <p class="mt-2 text-sm leading-6 text-slate-300">Visão cross-tenant de outcomes, cobertura, municípios e backlog de suporte.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════
-       BLOCO DE CONFIANÇA
-  ═══════════════════════════════════════════════ -->
-  <section class="bg-slate-50 py-20 px-4 border-t border-slate-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-10 reveal">
-        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Sem promessas vagas.</h2>
-        <p class="text-slate-500 max-w-xl mx-auto">Confiança em pré-venda vem de transparência, não de logos e depoimentos fabricados. Veja o que você encontra aqui.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-4 reveal-stagger">
-        <div class="card-lift bg-white border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+    <section id="oferta" class="bg-slate-100 px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl rounded-3xl bg-white p-6 shadow-soft sm:p-10">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="reveal">
+            <p class="section-kicker">Piloto fundador</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Entre com um lote real e saia com diagnóstico, relatório e próximos passos.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-600">
+              O piloto existe para provar valor com dados do seu fluxo atual, sem troca de ERP ou emissor. A entrada recomendada é um lote de XMLs representativo do fechamento.
+            </p>
+            <div class="mt-8 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-700">Até {{PILOT_DOCS_MAX}} documentos no piloto</div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-700">1 call de diagnóstico de {{EFFORT_MINUTES}} min</div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-700">Relatório executivo em PDF</div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-700">Acompanhamento direto com fundador</div>
+            </div>
           </div>
-          <div>
-            <p class="font-semibold text-slate-800 text-sm mb-1">Criado por desenvolvedor fullstack</p>
-            <p class="text-slate-500 text-xs">Com foco em automação, APIs e integrações B2B. Acompanhamento direto com quem construiu o serviço.</p>
-          </div>
-        </div>
-        <div class="card-lift bg-white border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-          </div>
-          <div>
-            <p class="font-semibold text-slate-800 text-sm mb-1">Escopo definido, limites claros</p>
-            <p class="text-slate-500 text-xs">Piloto limitado a até {{PILOT_DOCS_MAX}} notas. Você sabe exatamente o que está contratando antes de pagar.</p>
-          </div>
-        </div>
-        <div class="card-lift bg-white border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          </div>
-          <div>
-            <p class="font-semibold text-slate-800 text-sm mb-1">Modelo do relatório antes de contratar</p>
-            <p class="text-slate-500 text-xs">Você vê como é o entregável antes de qualquer compromisso. Sem surpresas sobre o que vai receber.</p>
-          </div>
-        </div>
-        <div class="card-lift bg-white border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
-          <div class="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          </div>
-          <div>
-            <p class="font-semibold text-slate-800 text-sm mb-1">Oferta atualizada em abril de 2026</p>
-            <p class="text-slate-500 text-xs">Conteúdo e escopo revisados com base no momento atual da reforma tributária e dos padrões NFS-e.</p>
+          <div class="reveal rounded-3xl border border-slate-200 bg-slate-950 p-7 text-white">
+            <p class="text-sm font-bold text-slate-300">Piloto único</p>
+            <div class="mt-3 flex items-end gap-2">
+              <span class="text-5xl font-black">{{PRICE_PILOT_FMT}}</span>
+              <span class="mb-2 text-sm text-slate-400">entrada controlada</span>
+            </div>
+            <p class="mt-4 rounded-2xl bg-mint/10 p-4 text-sm leading-6 text-teal-100">
+              O valor é abatido integralmente no setup se a implantação fizer sentido para o seu escritório em até {{DAYS_TO_CLOSE}} dias.
+            </p>
+            <a
+              href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Quero%20rodar%20um%20piloto%20do%20Valida%20Nota%20com%20um%20lote%20real"
+              target="_blank"
+              onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'offer' })"
+              class="btn mt-7 block rounded-xl bg-mint px-6 py-4 text-center text-base font-black text-ink hover:bg-teal-300"
+            >
+              Agendar avaliação do lote
+            </a>
+            <p class="mt-4 text-center text-xs text-slate-400">{{SLOTS_PER_MONTH}} vagas por mês para manter acompanhamento próximo.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════
-       FAQ
-  ═══════════════════════════════════════════════ -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-10 reveal">Perguntas frequentes</h2>
-      <div class="space-y-3 reveal-stagger">
-        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
-          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800 list-none">
-            Isso substitui meu emissor?
-            <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
-            Não. O piloto valida as notas já emitidas no fluxo que você usa hoje. Ele opera por cima do processo atual — sem substituir ERP, emissor ou qualquer outro sistema.
-          </div>
-        </details>
-        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
-          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800 list-none">
-            Funciona com emissor SEBRAE, NFS-e Nacional ou ERP?
-            <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
-            Se você consegue exportar XML, CSV ou um conjunto consistente dos dados da nota, o piloto consegue começar sem integração pesada. A maioria dos sistemas contábeis e emissores permite isso por padrão.
-          </div>
-        </details>
-        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
-          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800 list-none">
-            Preciso integrar API agora?
-            <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
-            Não. No piloto, a prioridade é validar valor e gerar aprendizado com o menor atrito possível. Integração via API é uma evolução natural — não um requisito de entrada.
-          </div>
-        </details>
-        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
-          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800 list-none">
-            Em quanto tempo vejo resultado?
-            <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
-            O objetivo do piloto é colocar o primeiro fluxo funcionando em até 14 dias. Você recebe o diagnóstico com as primeiras inconsistências ainda dentro desse prazo.
-          </div>
-        </details>
-        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
-          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800 list-none">
-            E se eu não quiser continuar depois do piloto?
-            <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
-            Você fica com o diagnóstico, o aprendizado e o modelo de validação levantado no piloto. Sem fidelidade, sem pressão para continuar.
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       CTA FINAL
-  ═══════════════════════════════════════════════ -->
-  <section class="bg-slate-900 text-white py-20 px-4">
-    <div class="max-w-3xl mx-auto text-center reveal">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
-        Pronto para reduzir o retrabalho<br class="hidden sm:block" />
-        no próximo fechamento?
-      </h2>
-      <p class="text-slate-400 mb-10 max-w-xl mx-auto">
-        Piloto com escopo definido, acompanhamento direto com o fundador e valor integral convertido em crédito se fizer sentido continuar.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#piloto"
-          onclick="gtag('event', 'quero_participar3', { source: 'landing_page', cta_location: 'cta_final' })"
-           class="btn-shimmer w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all shadow-lg shadow-brand-900/40 hover:scale-105">
-          Quero participar do piloto
-        </a>
-        <a
-          href="/downloads/valida_nota_apresentacao.pdf"
-          download
-          onclick="gtag('event', 'download_pdf2', { file_name: 'valida_nota_apresentacao.pdf', source: 'landing_page', cta_location: 'cta_final' })"
-          class="btn-shimmer w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all hover:scale-105">
-          Baixar apresentação em PDF
-        </a>
-      </div>
-      <div class="mt-4">
-        <a href="https://wa.me/5516997391404?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20piloto%20do%20Valida Nota"
-           target="_blank"
-           onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'cta_final' })"
-           class="text-slate-300 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
-          Prefiro falar no WhatsApp primeiro
-        </a>
-      </div>
-      <p class="mt-6 text-slate-500 text-xs">Apenas {{SLOTS_PER_MONTH}} vagas por mês · Piloto pago · {{PRICE_PILOT_FMT}} único · Crédito integral se continuar</p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════ -->
-  <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-700/60">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex flex-col items-center gap-6">
-        <!-- Logo -->
-        <div class="bg-white rounded-2xl px-6 py-3 flex items-center">
-          <img src="validador_fiscal/assets/logo_validanota.png" alt="validanota" class="h-14 w-auto" />
+    <section class="bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="reveal text-center text-3xl font-black tracking-tight text-slate-950">Perguntas objetivas</h2>
+        <div class="mt-10 space-y-3">
+          <details class="reveal rounded-2xl border border-slate-200 bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-black text-slate-950">
+              O Valida Nota substitui o emissor?
+              <span class="text-xl text-teal">+</span>
+            </summary>
+            <div class="border-t border-slate-100 px-6 pb-5 pt-4 text-sm leading-6 text-slate-600">
+              Não. Ele atua como camada de diagnóstico e evidência sobre XMLs e dados fiscais exportados do fluxo atual.
+            </div>
+          </details>
+          <details class="reveal rounded-2xl border border-slate-200 bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-black text-slate-950">
+              O sistema promete compliance fiscal completo?
+              <span class="text-xl text-teal">+</span>
+            </summary>
+            <div class="border-t border-slate-100 px-6 pb-5 pt-4 text-sm leading-6 text-slate-600">
+              Não. O produto reduz retrabalho e melhora rastreabilidade dentro das regras e escopos suportados. A responsabilidade fiscal final continua com contribuinte, contador ou responsável técnico.
+            </div>
+          </details>
+          <details class="reveal rounded-2xl border border-slate-200 bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-black text-slate-950">
+              O que acontece com documento fora do escopo?
+              <span class="text-xl text-teal">+</span>
+            </summary>
+            <div class="border-t border-slate-100 px-6 pb-5 pt-4 text-sm leading-6 text-slate-600">
+              Ele é classificado como out_of_scope ou unsupported_document, conforme o caso. Isso evita tratar falta de cobertura como erro fiscal do cliente.
+            </div>
+          </details>
+          <details class="reveal rounded-2xl border border-slate-200 bg-white">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-black text-slate-950">
+              Precisa integrar API no primeiro dia?
+              <span class="text-xl text-teal">+</span>
+            </summary>
+            <div class="border-t border-slate-100 px-6 pb-5 pt-4 text-sm leading-6 text-slate-600">
+              Não. O piloto pode começar por upload de XMLs. Integrações entram depois, quando houver clareza de volume, origem dos dados e rotina de fechamento.
+            </div>
+          </details>
         </div>
-        <!-- Tagline -->
-        <p class="text-sm text-center text-slate-400">
-          Validação automática de NF-e e NFS-e para escritórios contábeis e pequenas empresas.<br />
-          Conformidade CBS/IBS · Reforma Tributária 2026 · Sem trocar de emissor.
+      </div>
+    </section>
+
+    <section class="bg-ink px-4 py-20 text-white sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center reveal">
+        <img src="validador_fiscal/assets/logo_validanota_2026_fundo_escuro.png" alt="Valida Nota" class="mx-auto h-20 w-auto" />
+        <h2 class="mt-8 text-3xl font-black tracking-tight sm:text-4xl">Leve um lote real para a mesa e veja o diagnóstico antes do próximo fechamento.</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+          Relatório executivo, fila de revisão, trilha de auditoria e cobertura observável para decidir com evidência.
         </p>
-        <!-- Copyright -->
-        <div class="w-full border-t border-slate-700/60 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p class="text-xs text-slate-500">© 2026 validanota. Todos os direitos reservados.</p>
-          <p class="text-xs text-slate-600">Valida Nota é um produto validanota · Oferta atualizada em abril de 2026</p>
+        <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href="https://wa.me/5516997391404?text=Ol%C3%A1!%20Quero%20avaliar%20o%20Valida%20Nota%20para%20meu%20escrit%C3%B3rio"
+            target="_blank"
+            onclick="gtag('event', 'click_whatsapp', { source: 'landing_page', cta_location: 'final' })"
+            class="btn rounded-xl bg-mint px-7 py-4 text-base font-black text-ink hover:bg-teal-300"
+          >
+            Falar no WhatsApp
+          </a>
+          <a
+            href="validador_fiscal/relatorio-executivo-2026-04-23.pdf"
+            download
+            onclick="gtag('event', 'download_pdf', { file_name: 'relatorio-executivo-2026-04-23.pdf', source: 'landing_page', cta_location: 'final' })"
+            class="btn rounded-xl border border-white/20 bg-white/10 px-7 py-4 text-base font-black text-white hover:bg-white/15"
+          >
+            Baixar relatório real
+          </a>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+      <div>
+        <img src="validador_fiscal/assets/logo_validanota_2026.png" alt="Valida Nota" class="h-12 w-auto" />
+        <p class="mt-3 text-sm text-slate-500">Diagnóstico fiscal automatizado para NF-e e NFS-e.</p>
+      </div>
+      <div class="text-xs leading-6 text-slate-500">
+        <p>© 2026 Valida Nota. Todos os direitos reservados.</p>
+        <p>Oferta e escopo atualizados em abril de 2026.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll-reveal via IntersectionObserver -->
   <script>
     (function () {
-      var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+      var revealEls = document.querySelectorAll('.reveal');
       if (!revealEls.length) return;
       var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            obs.unobserve(e.target);
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.10 });
+      }, { threshold: 0.12 });
       revealEls.forEach(function (el) { obs.observe(el); });
     })();
   </script>
 
-  <!-- Substituição de placeholders em tempo real via config.js -->
   <script>
     (function () {
       var vars = window.COPY_VARS;
